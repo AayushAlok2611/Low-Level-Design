@@ -85,6 +85,7 @@ class Game{
     vector<Player> players;
     bool gameOver;
     int currentPlayerIndex;
+    Player winningPlayer;
     Dice* dicePtr;
     Player getCurrentPlayer(){}
 
@@ -121,13 +122,18 @@ class Game{
 
         bool shouldEndGame = board.isPostionTheFinalPosition(endPosition);
 
-        if(shouldEndGame) endGame();
+        if(shouldEndGame) endGame(player);
 
         return true;
     }
     void changeCurrentPlayer(){}
-    void endGame(){
+    void endGame(Player player){
+        winningPlayer = player;
         gameOver = true;
+    }
+    Player* getPlayerWhoWon(){
+        if(!isGameOver) return NULL;
+        return &winningPlayer;
     }
     bool isGameOver(){
         return gameOver;
