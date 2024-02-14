@@ -2,6 +2,15 @@
 #include <vector>
 #include <map>
 using namespace std;
+
+/*
+Doing complex Object Orieneted Programming is tough for me in C++ , mainly because I am
+not completely comfortable with memory management in C++.
+This program's code strcuture is good but it is not functional
+*/
+
+
+
 /*
 Assumptions ->
 1) All shelves will have the same type of items
