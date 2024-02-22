@@ -7,6 +7,9 @@ public class Main {
         
         The chain of resposnibilty is 
         infoLogProcessor -> debugLogProcessor -> errorLogProcessor
+        
+        For each call to log of the logProcessor we check if current type of LogProcessoe can handle this or not
+        If it cant handle it then pass it onwards to the next processor.
 
         */ 
         LogProcessor infoLogProcessor = new InfoLogProcessor();
